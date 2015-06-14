@@ -228,7 +228,7 @@ function usage(msg)
   let [node, program] = process.argv;
 
   if (msg) {
-    console.log(`${msg}\n\n`);
+    console.log(`${msg}\n`);
   }
 
   console.log(`Usage: ${node} ${program} <command>
@@ -240,9 +240,7 @@ Available commands:
   reset     - Reset the device state, turn off all the relays
   `);
 
-  if (msg) {
-    throw 'Error';
-  }
+  process.exit(msg ? 1 : 0); // eslint-disable-line no-process-exit
 }
 
 
