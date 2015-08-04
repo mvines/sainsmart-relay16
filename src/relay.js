@@ -22,9 +22,6 @@ THE SOFTWARE.
 
 'use strict';
 
-// TODO: Why doesn't grunt-babel provide Promise by default?
-var Promise = require('promise');
-
 class Relay16 {
 
   constructor()
