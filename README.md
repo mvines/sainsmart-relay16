@@ -25,7 +25,7 @@ sudo apt-get install libusb-1.0-0-dev
 ### Segmentation fault (core dumped)
 
 Currently [node-hid](https://github.com/node-hid/node-hid) will segmentation fault if the current user does not
-have access to the HID device.  The quick way to resolve this is to use `sudo`:
+have access to the HID device. You may use `sudo` or follow the instructions to add [udev rules](#udev-rules).
 
 ```
 $ bin/relay test
@@ -45,6 +45,31 @@ Detected devices: [ { vendorId: 1046,
     release: 0,
     interface: 0 } ]
 
+```
+
+### udev rules
+
+You can use this module without sudo by following the steps below:
+
+1. Copy [the udev rules file](51-sainsmart-usb.rules) to /etc/udev/rules.d.
+
+    ```
+    sudo cp 51-sainsmart-usb.rules /etc/udev/rules.d/
+    ```
+
+2. Disconnect and reconnect the device from USB.
+
+3. Run the command without sudo!
+
+```
+$  bin/relay test
+Detected devices: [ { vendorId: 1046,
+    productId: 20512,
+    path: '0001:0008:00',
+    manufacturer: 'Nuvoton',
+    product: 'HID Transfer',
+    release: 0,
+    interface: 0 } ]
 ```
 
 ## Required Hardware
