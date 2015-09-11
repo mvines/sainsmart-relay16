@@ -1,0 +1,3 @@
+# udev rules to allow write access to all users
+# for Sainsmart USB devices
+SUBSYSTEM=="usb", ATTR{idVendor}=="0416", MODE="0666"
