@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "0.12"
+
+addons:
+  apt:
+    packages:
+    - libusb-1.0-0-dev
+
