@@ -1,5 +1,6 @@
-This module controls a SainSmart 16-channel USB-HID programmable relay.
+[![Build Status](https://travis-ci.org/mvines/relay.svg)](https://travis-ci.org/mvines/relay)
 
+This module controls a SainSmart 16-channel USB-HID programmable relay. 
 ## Usage
 ```
 $ npm install
