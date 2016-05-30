@@ -222,7 +222,8 @@ function mapRelay()
 
 function usage(msg)
 {
-  let [node, program] = process.argv;
+  let node = process.argv[0];
+  let program = process.argv[1];
 
   if (msg) {
     console.log(`${msg}\n`);
@@ -240,8 +241,8 @@ Available commands:
   process.exit(msg ? 1 : 0); // eslint-disable-line no-process-exit
 }
 
-
-let [,, cmd, param] = process.argv;
+let cmd = process.argv[2];
+let param = process.argv[3];
 if (!cmd) {
   usage();
 } else {

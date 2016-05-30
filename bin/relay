@@ -2,4 +2,4 @@
 
 'use strict';
 process.title = 'relay';
-require('../dist/relay.js');
+require('../src/relay.js');
