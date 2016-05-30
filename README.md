@@ -4,7 +4,7 @@ This module controls a SainSmart 16-channel USB-HID programmable relay.
 ## Usage
 ```
 $ npm install
-$ bin/relay
+$ ./cli.js
 Usage: node bin/relay <command>
 
 Available commands:
@@ -29,7 +29,7 @@ Currently [node-hid](https://github.com/node-hid/node-hid) will segmentation fau
 have access to the HID device. You may use `sudo` or follow the instructions to add [udev rules](#udev-rules).
 
 ```
-$ bin/relay test
+$ ./cli.js test
 Detected devices: [ { vendorId: 1046,
     productId: 20512,
     path: '0007:0009:00',
@@ -63,7 +63,7 @@ You can use this module without sudo by following the steps below:
 3. Run the command without sudo!
 
 ```
-$  bin/relay test
+$  ./cli.js test
 Detected devices: [ { vendorId: 1046,
     productId: 20512,
     path: '0001:0008:00',
