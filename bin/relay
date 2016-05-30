@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-
-'use strict';
-process.title = 'relay';
-require('../src/relay.js');

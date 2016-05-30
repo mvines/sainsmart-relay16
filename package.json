@@ -2,7 +2,8 @@
   "name": "relay",
   "version": "0.1.0",
   "description": "Controls a SainSmart 16-channel USB-HID programmable relay",
-  "bin" : "bin/relay",
+  "bin" : "cli.js",
+  "main": "relay.js",
   "author" : {
     "name": "Michael Vines",
     "email": "mvines@gmail.com"
@@ -13,7 +14,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint .",
     "test": "npm run lint"
   },
   "eslintConfig": {
