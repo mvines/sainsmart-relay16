@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mvines/relay.svg)](https://travis-ci.org/mvines/relay)
 
-This module controls a SainSmart 16-channel USB-HID programmable relay. 
+This module controls a SainSmart 16-channel USB-HID programmable relay using node. 
 ## Usage
 ```
 $ npm install
@@ -85,4 +85,5 @@ You will also need a 12V power supply (~1A) connected to the **blue**
 connector on the main relay board.  Do not connect anything to the **green** connector
 on the USB HID board.
 
-
+## Links
+* There's a python port of this project at https://github.com/tatobari/hidrelaypy if you prefer Python over node.
