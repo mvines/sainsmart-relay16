@@ -43,9 +43,7 @@ class Relay16 {
         if (state) {
           mask = mask | bit;
         } else {
-          if (readmask == 128) {
-            mask = mask ^ bit;
-          }
+          mask = mask ^ bit;
         }
         return this.write(mask);
       });
