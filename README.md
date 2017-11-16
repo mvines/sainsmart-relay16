@@ -86,4 +86,5 @@ connector on the main relay board.  Do not connect anything to the **green** con
 on the USB HID board.
 
 ## Links
+* Another node version with a slightly different API: https://github.com/underbluewaters/sainsmart-16-hid
 * There's a python port of this project at https://github.com/tatobari/hidrelaypy if you prefer Python over node.
