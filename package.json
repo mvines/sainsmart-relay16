@@ -1,6 +1,6 @@
 {
-  "name": "relay",
-  "version": "0.1.0",
+  "name": "sainsmart-relay16",
+  "version": "1.0.0",
   "description": "Controls a SainSmart 16-channel USB-HID programmable relay",
   "bin" : "cli.js",
   "main": "relay.js",
@@ -37,6 +37,6 @@
     "eslint": "^1.10.0"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   }
 }
