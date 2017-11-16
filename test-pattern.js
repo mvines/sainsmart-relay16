@@ -1,6 +1,6 @@
 'use strict';
 
-const Relay16 = require('./relay16.js');
+const Relay16 = require('./index');
 
 function timeout(ms) {
   return new Promise((resolve) => setTimeout(() => resolve(), ms));

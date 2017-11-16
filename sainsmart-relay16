@@ -2,8 +2,8 @@
 
 'use strict';
 
-let Relay16 = require('./relay16.js');
-let testPattern = require('./test-pattern.js');
+let Relay16 = require('./index');
+let testPattern = require('./test-pattern');
 
 function usage(msg) {
   const node = process.argv[0];
