@@ -5,10 +5,9 @@
 let Relay16 = require('./relay16.js');
 let testPattern = require('./test-pattern.js');
 
-function usage(msg)
-{
-  let node = process.argv[0];
-  let program = process.argv[1];
+function usage(msg) {
+  const node = process.argv[0];
+  const program = process.argv[1];
 
   if (msg) {
     console.log(`${msg}\n`);
@@ -30,20 +29,19 @@ function timeout(ms) {
   return new Promise((resolve) => setTimeout(() => resolve(), ms));
 }
 
-function mapRelay()
-{
-  let relay = new Relay16();
+function mapRelay() {
+  const relay = new Relay16();
 
   let relayBitmap = new Array(16);
 
   // Turn all the relays off
-  var p = relay.read().then(() => relay.write(0));
+  let p = relay.read().then(() => relay.write(0));
 
   // Turn on each relay in sequence and read in its bit
   for (let i = 0; i < 16; i++) {
     p = p.then(() => relay.write(Math.pow(2, i)))
     .then(() => relay.read())
-    .then(mask => {
+    .then((mask) => {
       relayBitmap[i] = mask;
     })
     .then(() => timeout(100));
@@ -63,8 +61,8 @@ function mapRelay()
 
 
 
-let cmd = process.argv[2];
-let param = process.argv[3];
+const cmd = process.argv[2];
+const param = process.argv[3];
 if (!cmd) {
   usage();
 } else {
@@ -89,7 +87,7 @@ if (!cmd) {
     break;
   case 'reset':
   {
-    let relay = new Relay16();
+    const relay = new Relay16();
     relay.reset()
     .then(() => relay.read())
     .then(() => relay.write(0));
