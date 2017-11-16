@@ -2,7 +2,7 @@
   "name": "sainsmart-relay16",
   "version": "1.0.0",
   "description": "Controls a SainSmart 16-channel USB-HID programmable relay",
-  "bin" : "cli.js",
+  "bin" : "sainsmart-relay16",
   "main": "relay.js",
   "author" : {
     "name": "Michael Vines",
