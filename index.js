@@ -14,9 +14,13 @@ class Relay16 {
     this.hid = new HID.HID(USB_VID, USB_PID);
   }
 
+  close() {
+    this.hid.close();
+  }
+
   set(id, state) {
     if (typeof id !== 'number') {
-      throw new Error(`Invalid relay ID type: ${id}`);
+      throw new Error(`Invalid relay ID type: ${typeof id}`);
     }
     if (id < 0 || id > 15) {
       throw new Error(`Invalid relay ID: ${id}`);
